@@ -1,0 +1,86 @@
+/* AboutUs.css */
+.image-grid-decorated {
+  position: relative;
+  padding: 1rem;
+}
+
+/* Top-right red border */
+.image-grid-decorated::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 98%;
+  height: 180px;
+  border-top: 1px solid #ED1C24;
+  border-right: 1px solid #ED1C24;
+  border-radius: 0 40px 0 0;
+  box-sizing: border-box;
+}
+
+/* Bottom-left red border */
+.image-grid-decorated::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 98%;
+  height: 180px;
+  border-bottom: 1px solid #ED1C24;
+  border-left: 1px solid #ED1C24;
+  border-radius: 0 0 0 40px;
+  box-sizing: border-box;
+}
+
+.button-with-lines {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.button-with-lines::before,
+.button-with-lines::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 1px;
+  width: 100px;
+  background-color: #ED1C24;
+}
+
+.button-with-lines::after {
+  right: -110px;
+}
+
+/* 🔴 Hide lines on small screens (less than 768px) */
+@media (max-width: 767px) {
+  .button-with-lines::before,
+  .button-with-lines::after {
+    display: none;
+  }
+}
+
+/* Medium screen (>=768px) */
+@media (min-width: 768px) {
+  .button-with-lines::before,
+  .button-with-lines::after {
+    width: 80px;
+  }
+
+  .button-with-lines::after {
+    right: -100px;
+  }
+}
+
+/* Large screen (>=1024px) */
+@media (min-width: 1024px) {
+  .button-with-lines::before,
+  .button-with-lines::after {
+    width: 300px;
+  }
+
+  .button-with-lines::after {
+    right: -210px;
+  }
+}
