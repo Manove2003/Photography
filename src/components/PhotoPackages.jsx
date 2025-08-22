@@ -17,6 +17,12 @@ import t3 from '../assests/t3.png'
 import v1 from '../assests/v1.png'
 import v2 from '../assests/v2.png'
 
+import img1 from '../assests/img1.jpg'
+import img2 from '../assests/img2.jpg'
+import img3 from '../assests/img3.png'
+import videofinal from '../assests/videofinal.mov'
+
+
 import threedvideo2 from '../assests/videonew.mp4'
 
 import dtour from "../assests/3dTour.png"
@@ -237,6 +243,57 @@ const PhotoPackages = () => {
   </div>
 </section>
 
+
+<section className="px-4 bg-white">
+  <div className="max-w-5xl mx-auto text-center">
+    {/* First row */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+      {/* Image 1 */}
+      <div className="h-96 md:h-[90%]">
+        <img
+          src={img1}
+          alt="House Exterior"
+          className="w-full h-full rounded-md object-cover"
+        />
+      </div>
+
+      {/* Image 2 */}
+      <div className="h-96 md:h-[90%]">
+        <img
+          src={img2}
+          alt="Interior View"
+          className="w-full h-full rounded-md object-cover"
+        />
+      </div>
+    </div>
+
+    {/* Second row */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+      {/* Image 3 */}
+      <div className="h-96 md:h-[90%]">
+        <img
+          src={img3}
+          alt="House Exterior"
+          className="w-full h-full rounded-md object-cover"
+        />
+      </div>
+
+      {/* Video 1 */}
+      <div className="h-96 md:h-[90%]">
+        <video
+          src={videofinal}
+          controls
+          autoPlay
+          loop
+          muted
+          className="w-full h-full rounded-md object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+  
    <section className="px-4 py-16  bg-white text-center">
      <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-manrope font-semibold mb-6">
