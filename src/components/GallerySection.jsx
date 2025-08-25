@@ -6,8 +6,15 @@ import house4 from '../assests/R4.png'
 import house5 from '../assests/R5.png'
 import house6 from '../assests/R6.png'
 
+
+import img1 from '../assests/img1.jpg'
+import img2 from '../assests/img2.jpg'
+import img3 from '../assests/img3.png'
+import videofinal from '../assests/videofinal.mov'
+
 const GallerySection = () => {
   return (
+    <>
     <section className="px-4 pt-4 pb-16  max-w-6xl mx-auto">
       {/* Heading */}
       <div className="text-center mb-12">
@@ -72,15 +79,73 @@ const GallerySection = () => {
       </div>
 
       {/* Buttons */}
-      <div className="flex justify-center gap-4 flex-wrap mt-12">
-        <button className="bg-[#ED1C24] text-white px-6 py-2 rounded transition hover:bg-red-600">
-          See Our Packages
-        </button>
-        <button className="border border-[#ED1C24] text-[#ED1C24] px-6 py-2 rounded transition hover:bg-red-100">
-          Talk To Expert
-        </button>
-      </div>
+<div className="flex justify-center gap-4 flex-wrap mt-12"> 
+  <button
+    onClick={() => window.open("https://wa.me/14045026940", "_blank")}
+    className="bg-[#ED1C24] text-white px-6 py-2 rounded transition hover:bg-red-600"
+  >
+    See Our Packages
+  </button>
+
+  <button
+    onClick={() => window.open("https://wa.me/14045026940", "_blank")}
+    className="border border-[#ED1C24] text-[#ED1C24] px-6 py-2 rounded transition hover:bg-red-100"
+  >
+    Talk To Expert
+  </button>
+</div>
     </section>
+
+  <section className="px-4 bg-white py-8">
+  <div className="max-w-5xl mx-auto text-center">
+    <div className="flex flex-col lg:flex-row gap-4">
+      {/* Left Column - 30% width */}
+      <div className="lg:w-[30%] w-full flex flex-col gap-4">
+        <img
+          src={img1}
+          alt="Left Column Image 1"
+          className="w-full h-80 object-cover rounded-lg shadow-md"
+        />
+      </div>
+
+      {/* Right Column - 70% width */}
+      <div className="lg:w-[70%] w-full flex flex-col gap-4">
+        {/* First Row in Right Column */}
+        <div className="flex flex-col sm:flex-row gap-4">
+          <div className="w-full sm:w-1/2">
+            <img
+              src={img2}
+              alt="Right Image 1"
+              className="w-full h-80 object-cover rounded-lg shadow-md"
+            />
+          </div>
+          <div className="w-full sm:w-1/2">
+            <img
+              src={img3}
+              alt="Right Image 2"
+              className="w-full h-80 object-cover rounded-lg shadow-md"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Video Section */}
+    <div className="mt-8">
+<video
+  src={videofinal}
+  controls
+  autoPlay
+  loop
+  muted
+  className="w-full max-h-[500px] object-contain "
+/>
+    </div>
+  </div>
+</section>
+
+
+</>    
   );
 };
 

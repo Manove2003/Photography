@@ -10,6 +10,8 @@ import d1 from '../assests/d1.png'
 import d2 from '../assests/d2.png'
 import d3 from '../assests/d3.png'
 
+import replace from '../assests/replace.jpeg'
+
 import t1 from '../assests/t1.png'
 import t2 from '../assests/t2.png'
 import t3 from '../assests/t3.png'
@@ -244,54 +246,6 @@ const PhotoPackages = () => {
 </section>
 
 
-<section className="px-4 bg-white">
-  <div className="max-w-5xl mx-auto text-center">
-    {/* First row */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-      {/* Image 1 */}
-      <div className="h-96 md:h-[90%]">
-        <img
-          src={img1}
-          alt="House Exterior"
-          className="w-full h-full rounded-md object-cover"
-        />
-      </div>
-
-      {/* Image 2 */}
-      <div className="h-96 md:h-[90%]">
-        <img
-          src={img2}
-          alt="Interior View"
-          className="w-full h-full rounded-md object-cover"
-        />
-      </div>
-    </div>
-
-    {/* Second row */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-      {/* Image 3 */}
-      <div className="h-96 md:h-[90%]">
-        <img
-          src={img3}
-          alt="House Exterior"
-          className="w-full h-full rounded-md object-cover"
-        />
-      </div>
-
-      {/* Video 1 */}
-      <div className="h-96 md:h-[90%]">
-        <video
-          src={videofinal}
-          controls
-          autoPlay
-          loop
-          muted
-          className="w-full h-full rounded-md object-cover"
-        />
-      </div>
-    </div>
-  </div>
-</section>
 
   
    <section className="px-4 py-16  bg-white text-center">
@@ -367,8 +321,10 @@ easily knowing you will not only get high quality drone photos, but also legal d
                 alt={`House ${index + 1}`}
                 className="w-full h-64 object-cover"
               />
+              
             </div>
           ))}
+          
         </div>
       </div>
     </section>
@@ -388,7 +344,7 @@ easily knowing you will not only get high quality drone photos, but also legal d
         </p>
 
         {/* Video Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           {/* Video 1 */}
           <div className="relative">
             <img
@@ -428,15 +384,57 @@ easily knowing you will not only get high quality drone photos, but also legal d
               </button>
             </div>
           </div>
+              <div className="relative">
+      <video
+        ref={videoRef}
+        src={threedvideo2}
+        controls
+        autoPlay={false}
+        muted
+        loop
+        className="w-full h-full rounded-md"
+      >
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Play/Pause button overlay */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <button
+          onClick={handlePlayPause}
+          className="bg-white/70 rounded-full p-4 hover:bg-white"
+        >
+          {isPlaying1 ? (
+            // Pause icon
+            <svg
+              className="w-8 h-8 text-black"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+            </svg>
+          ) : (
+            // Play icon
+            <svg
+              className="w-8 h-8 text-black"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          )}
+        </button>
+      </div>
+    </div>
+
         </div>
       </div>
           <div className="max-w-5xl mx-auto text-center py-20">
-        <h2 className="text-4xl font-manrope font-semibold mb-4">3D Tours</h2>
+        <h2 className="text-4xl font-manrope font-semibold mb-4">3D & 2D Tours</h2>
         <p className="text-gray-700 text-base max-w-3xl mx-auto">
-         There's nothing quite like a 3D tour when it comes to assets a prospective buyer will love, but not only that, 3D tours
+         There's nothing quite like a 3D & 2D tour when it comes to assets a prospective buyer will love, but not only that, 3D & 2D tours
 are a great tool to show your sellers to win more listings! 
           <span className="font-semibold">
- Our 3D tours start at just $190!
+ Our 3D & 2D tours start at just $190!
           </span>{" "}
         </p>
 
@@ -484,47 +482,14 @@ are a great tool to show your sellers to win more listings!
       )}
     </div>
           {/* Video 2 */}
-    <div className="relative">
-      <video
-        ref={videoRef}
-        src={threedvideo2}
-        controls
-        autoPlay={false}
-        muted
-        loop
-        className="w-full h-full rounded-md"
-      >
-        Your browser does not support the video tag.
-      </video>
+<div className="relative">
+  <img
+    src={replace} 
+    alt="Preview"
+    className="w-full h-full rounded-md object-cover"
+  />
+</div>
 
-      {/* Play/Pause button overlay */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <button
-          onClick={handlePlayPause}
-          className="bg-white/70 rounded-full p-4 hover:bg-white"
-        >
-          {isPlaying1 ? (
-            // Pause icon
-            <svg
-              className="w-8 h-8 text-black"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-            </svg>
-          ) : (
-            // Play icon
-            <svg
-              className="w-8 h-8 text-black"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          )}
-        </button>
-      </div>
-    </div>
         </div>
              <p className="text-gray-700 text-base max-w-3xl mx-auto pt-8">
  We also provide more than just the standard services that most real estate media companies offer. From floorplans & virtual staging.       </p>
