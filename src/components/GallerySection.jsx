@@ -81,14 +81,14 @@ const GallerySection = () => {
       {/* Buttons */}
 <div className="flex justify-center gap-4 flex-wrap mt-12"> 
   <button
-    onClick={() => window.open("https://wa.me/14045026940", "_blank")}
+  onClick={() => window.open("tel:+14045026940", "_self")}
     className="bg-[#ED1C24] text-white px-6 py-2 rounded transition hover:bg-red-600"
   >
     See Our Packages
   </button>
 
   <button
-    onClick={() => window.open("https://wa.me/14045026940", "_blank")}
+  onClick={() => window.open("tel:+14045026940", "_self")}
     className="border border-[#ED1C24] text-[#ED1C24] px-6 py-2 rounded transition hover:bg-red-100"
   >
     Talk To Expert

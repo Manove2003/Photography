@@ -38,7 +38,7 @@ const RealEstateHero = () => {
           {/* Contact Us Button */}
           <div className="hidden md:block">
             <button 
-               onClick={() => window.open("https://wa.me/14045026940", "_blank")}
+  onClick={() => window.open("tel:+14045026940", "_self")}
            className="bg-black text-white text-sm px-6 py-2 rounded-lg font-medium">
               Contact Us
             </button>
@@ -61,7 +61,11 @@ const RealEstateHero = () => {
               <a href="#" className="block pl-4 py-1">Photography</a>
               <a href="#" className="block pl-4 py-1">Videography</a>
             </div>
-            <button className="mt-2 bg-black text-white w-full py-2 rounded-lg">
+            <button 
+              onClick={() => window.open("tel:+14045026940", "_self")}
+
+            className="mt-2 bg-black text-white w-full py-2 rounded-lg">
+
               Contact Us
             </button>
           </div>
@@ -83,7 +87,7 @@ const RealEstateHero = () => {
                 Schedule Shoot
               </button>
               <button 
-                  onClick={() => window.open("https://wa.me/14045026940", "_blank")} 
+  onClick={() => window.open("tel:+14045026940", "_self")}
               className="bg-white text-[#ED1C24] px-6 py-3 rounded font-medium">
                 Talk to expert
               </button>
