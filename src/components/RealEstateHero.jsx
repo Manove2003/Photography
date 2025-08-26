@@ -37,7 +37,9 @@ const RealEstateHero = () => {
 
           {/* Contact Us Button */}
           <div className="hidden md:block">
-            <button className="bg-black text-white text-sm px-6 py-2 rounded-lg font-medium">
+            <button 
+               onClick={() => window.open("https://wa.me/14045026940", "_blank")}
+           className="bg-black text-white text-sm px-6 py-2 rounded-lg font-medium">
               Contact Us
             </button>
           </div>
@@ -80,7 +82,9 @@ const RealEstateHero = () => {
               <button className="bg-red-600 hover:bg-[#ED1C24] text-white px-6 py-3 rounded font-medium">
                 Schedule Shoot
               </button>
-              <button className="bg-white text-[#ED1C24] px-6 py-3 rounded font-medium">
+              <button 
+                  onClick={() => window.open("https://wa.me/14045026940", "_blank")} 
+              className="bg-white text-[#ED1C24] px-6 py-3 rounded font-medium">
                 Talk to expert
               </button>
             </div>
